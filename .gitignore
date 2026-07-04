@@ -9,6 +9,9 @@ next-env.d.ts
 .env
 .env.*
 
+# Notas operativas locales (no públicas)
+INSTRUCCIONES.md
+
 # Sistema
 .DS_Store
 Thumbs.db
