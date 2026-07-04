@@ -37,15 +37,15 @@ function GitHubIcon() {
 export default function ContactRail() {
   return (
     <aside
-      aria-label="Contacto"
+      aria-label="Contact"
       className="fixed bottom-16 left-4 z-40 flex items-center gap-1 border border-line bg-surface/70 px-2 py-2 backdrop-blur-md md:left-6"
     >
       <span className="hidden select-none px-2 font-mono text-caps uppercase text-faint sm:inline">
-        Contactar
+        Contact
       </span>
       <a
         href={CONTACT.email}
-        aria-label="Enviar correo"
+        aria-label="Send email"
         className="p-2 text-muted transition-colors hover:text-accent focus-visible:text-accent"
       >
         <MailIcon />
@@ -54,7 +54,7 @@ export default function ContactRail() {
         href={CONTACT.linkedin}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Perfil de LinkedIn"
+        aria-label="LinkedIn profile"
         className="p-2 text-muted transition-colors hover:text-accent focus-visible:text-accent"
       >
         <LinkedInIcon />
@@ -63,7 +63,7 @@ export default function ContactRail() {
         href={CONTACT.github}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Perfil de GitHub"
+        aria-label="GitHub profile"
         className="p-2 text-muted transition-colors hover:text-accent focus-visible:text-accent"
       >
         <GitHubIcon />

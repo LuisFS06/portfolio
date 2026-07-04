@@ -3,11 +3,11 @@ import ProjectsIndex from "@/components/ProjectsIndex";
 import { getAllProjects, getAllProjectTags } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Proyectos",
-  description: "Índice de ingeniería: proyectos de ML/AI ordenados cronológicamente.",
+  title: "Projects",
+  description: "Engineering index: ML/AI projects in chronological order.",
 };
 
-export default function ProyectosPage() {
+export default function ProjectsPage() {
   const projects = getAllProjects();
   const tags = getAllProjectTags();
   const lastSync = projects[0]?.date.slice(0, 7).replace("-", ".") ?? "—";

@@ -38,6 +38,7 @@ export interface Publication {
   date: string;
   doi: string;
   arxivId: string;
+  authors: string;
   links: { paper?: string; code?: string };
   body: string;
 }
@@ -135,6 +136,7 @@ export function getAllPublications(): Publication[] {
         date: data.date ?? "",
         doi: data.doi ?? "",
         arxivId: data.arxivId ?? "",
+        authors: data.authors ?? "",
         links: data.links ?? {},
         body: content,
       };

@@ -41,7 +41,7 @@ export default function ProjectIndexRow({
       </div>
       <h2 className="font-display text-headline-sm text-accent transition-transform duration-300 md:col-span-3 md:group-hover:translate-x-2">
         <Link
-          href={`/proyectos/${project.slug}`}
+          href={`/projects/${project.slug}`}
           className="focus-visible:outline-2"
         >
           {project.title}
@@ -58,11 +58,11 @@ export default function ProjectIndexRow({
       </div>
       <div className="text-left md:col-span-1 md:text-right">
         <Link
-          href={`/proyectos/${project.slug}`}
-          aria-label={`Leer proyecto: ${project.title}`}
+          href={`/projects/${project.slug}`}
+          aria-label={`Read project: ${project.title}`}
           className="inline-flex items-center gap-1 font-mono text-utility text-accent"
         >
-          Leer{" "}
+          Read{" "}
           <span
             aria-hidden="true"
             className="transition-transform group-hover:translate-x-1"

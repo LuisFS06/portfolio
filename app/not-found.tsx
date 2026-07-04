@@ -7,13 +7,13 @@ export default function NotFound() {
         ERROR_404 {"//"} SEGMENT_NOT_FOUND
       </p>
       <h1 className="font-display text-display-lg-mobile text-accent md:text-display-lg">
-        Ruta fuera del índice.
+        Route out of index.
       </h1>
       <Link
         href="/"
         className="border border-line px-6 py-2 font-mono text-caps uppercase text-accent transition-colors hover:bg-panel"
       >
-        ← VOLVER_AL_INICIO
+        ← BACK_TO_HOME
       </Link>
     </div>
   );

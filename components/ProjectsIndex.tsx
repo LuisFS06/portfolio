@@ -29,9 +29,9 @@ export default function ProjectsIndex({
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
           <div>
             <h1 className="font-display text-display-lg-mobile uppercase text-accent md:text-display-lg">
-              Proyectos
+              Projects
             </h1>
-            <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2" aria-label="Filtrar por tag">
+            <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-2" aria-label="Filter by tag">
               {[ALL, ...tags].map((tag) => {
                 const active = tag === activeTag;
                 return (

@@ -85,8 +85,8 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
     <section
       ref={regionRef}
       role="region"
-      aria-roledescription="carrusel"
-      aria-label="Proyectos destacados"
+      aria-roledescription="carousel"
+      aria-label="Featured projects"
       tabIndex={0}
       onKeyDown={onKeyDown}
       className="relative flex min-h-[60vh] w-full flex-col overflow-hidden border-b border-line bg-vignette md:min-h-[calc(100vh-7rem)]"
@@ -98,7 +98,7 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
             className="mb-2 font-mono text-caps uppercase text-faint"
             aria-hidden="true"
           >
-            PROYECTO {"//"} {active.slug.replace(/-/g, "_").toUpperCase()}
+            PROJECT {"//"} {active.slug.replace(/-/g, "_").toUpperCase()}
           </span>
           <h1 className="font-display text-display-lg-mobile text-accent md:text-display-lg">
             {active.title}
@@ -126,7 +126,7 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
             <motion.button
               type="button"
               onClick={() => go(-1)}
-              aria-label={`Ir al proyecto anterior: ${prevSlide.title}`}
+              aria-label={`Go to previous project: ${prevSlide.title}`}
               initial={false}
               style={{ scale: 0.75, rotateY: 12 }}
               whileHover={
@@ -156,7 +156,7 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
             <motion.button
               type="button"
               onClick={() => go(1)}
-              aria-label={`Ir al proyecto siguiente: ${nextSlide.title}`}
+              aria-label={`Go to next project: ${nextSlide.title}`}
               initial={false}
               style={{ scale: 0.75, rotateY: -12 }}
               whileHover={
@@ -192,10 +192,10 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
             className="relative z-20 h-72 w-full max-w-2xl cursor-grab border border-line bg-surface/40 backdrop-blur-md active:cursor-grabbing md:h-96"
           >
             <Link
-              href={`/proyectos/${active.slug}`}
+              href={`/projects/${active.slug}`}
               className="block h-full w-full"
               draggable={false}
-              aria-label={`Ver proyecto: ${active.title}`}
+              aria-label={`View project: ${active.title}`}
             >
               <Image
                 src={active.heroImage}
@@ -223,7 +223,7 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
           <button
             type="button"
             onClick={() => go(-1)}
-            aria-label="Proyecto anterior"
+            aria-label="Previous project"
             className="pointer-events-auto flex h-12 w-12 items-center justify-center border border-line bg-surface/40 text-accent backdrop-blur-md transition-colors hover:border-accent-50"
           >
             <span aria-hidden="true" className="font-mono text-body-lg">‹</span>
@@ -231,7 +231,7 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
           <button
             type="button"
             onClick={() => go(1)}
-            aria-label="Proyecto siguiente"
+            aria-label="Next project"
             className="pointer-events-auto flex h-12 w-12 items-center justify-center border border-line bg-surface/40 text-accent backdrop-blur-md transition-colors hover:border-accent-50"
           >
             <span aria-hidden="true" className="font-mono text-body-lg">›</span>
@@ -242,7 +242,7 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
       {/* Barra de meta: STACK / ESTADO + índice sobre la micro-curva */}
       <div className="z-10 flex flex-col justify-between gap-6 border-t border-line/30 bg-lowest px-margin-mobile py-6 md:h-24 md:flex-row md:items-center md:gap-0 md:py-0 md:px-margin-desktop">
         <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
-          <ul className="flex flex-wrap gap-3" aria-label="Stack tecnológico">
+          <ul className="flex flex-wrap gap-3" aria-label="Tech stack">
             {active.stack.map((tech) => (
               <li key={tech}>
                 <StackTag label={tech} />

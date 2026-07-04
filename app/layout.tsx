@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: "%s | ML_ENGINEER",
   },
   description:
-    "Portafolio técnico de un Machine Learning Engineer & Data Architect: proyectos de ingeniería, publicaciones y trayectoria.",
+    "Technical portfolio of a Data Scientist & Machine Learning Engineer: engineering projects, publications and career log.",
 };
 
 export default function RootLayout({
@@ -43,18 +43,18 @@ export default function RootLayout({
 }) {
   return (
     <html
-      lang="es"
+      lang="en"
       className={`${inter.variable} ${newsreader.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-canvas font-serif text-body-md text-foreground antialiased">
         <a
-          href="#contenido"
+          href="#content"
           className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-20 focus:z-[60] focus:bg-accent focus:px-4 focus:py-2 focus:font-mono focus:text-caps focus:uppercase focus:text-accent-ink"
         >
-          Saltar al contenido
+          Skip to content
         </a>
         <Nav />
-        <main id="contenido" className="min-h-screen pb-24 pt-16">
+        <main id="content" className="min-h-screen pb-24 pt-16">
           {children}
         </main>
         <ContactRail />

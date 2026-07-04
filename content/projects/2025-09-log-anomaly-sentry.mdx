@@ -6,20 +6,20 @@ stack: ["scikit-learn", "go"]
 status: "archived"
 tags: ["mlops", "time-series"]
 heroImage: "/images/projects/log-anomaly-sentry/hero.svg"
-heroImageAlt: "Serie temporal de logs con un pico anómalo marcado por un punto blanco sobre la curva"
+heroImageAlt: "Log time series with an anomalous spike marked by a white dot on the curve"
 thesis: "Real-time unsupervised detection of system irregularities across distributed microservice architectures."
-excerpt: "Detección no supervisada en tiempo real de irregularidades en arquitecturas de microservicios distribuidas."
+excerpt: "Real-time unsupervised detection of irregularities across distributed microservice architectures."
 featured: false
 ---
 
-## Contexto
+## Context
 
-Antes de la observabilidad estructurada, el equipo dependía de umbrales estáticos que generaban tanto ruido que nadie los miraba. Este proyecto introdujo detección de anomalías no supervisada sobre los streams de logs de ~200 microservicios.
+Before structured observability, the team relied on static thresholds that generated so much noise nobody watched them. This project introduced unsupervised anomaly detection over the log streams of ~200 microservices.
 
-## Enfoque
+## Approach
 
-Un Isolation Forest por servicio, reentrenado cada hora sobre una ventana móvil de 7 días, con extracción de features en un colector escrito en Go para sostener el volumen de ingesta. Las alertas se agrupan por correlación temporal para evitar tormentas de notificaciones.
+One Isolation Forest per service, retrained hourly over a 7-day rolling window, with feature extraction in a Go collector to sustain the ingestion volume. Alerts are grouped by temporal correlation to avoid notification storms.
 
-## Estado
+## Status
 
-**Archivado**: el sistema corrió 18 meses en producción y fue reemplazado por la plataforma de observabilidad corporativa. El diseño del agrupamiento de alertas sobrevive en el sistema sucesor.
+**Archived**: the system ran 18 months in production and was replaced by the corporate observability platform. The alert-grouping design survives in its successor.

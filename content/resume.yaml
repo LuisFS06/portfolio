@@ -1,39 +1,53 @@
 name: "Luis Fernando Solano Coto"
-role: "Científico de Datos & Machine Learning Engineer"
+role: "Data Scientist & Machine Learning Engineer"
 photo: "/images/profile.svg"
 bio: >
-  Estadístico por la Universidad de Costa Rica y científico de datos en FIFCO,
-  donde diseño y despliego modelos de machine learning sobre Vertex AI,
-  BigQuery y Cloud Run para plataformas que gestionan más de un millón de
-  perfiles en ocho países. Mi trayectoria comenzó en el análisis estadístico y
-  hoy se optimiza hacia la ingeniería de ML: convertir modelos de investigación
-  en sistemas de producción confiables.
+  Statistician from the University of Costa Rica and data scientist at BAC
+  Latam, where I support customer segmentation and linkage from the Corporate
+  Data & Analytics Division. Previously at FIFCO, I designed and deployed
+  machine learning models on Vertex AI, BigQuery and Cloud Run for customer
+  data platforms managing over one million profiles across eight countries.
+  My path began in statistical analysis and keeps optimizing toward ML
+  engineering: turning research models into reliable production systems.
 experience:
-  - role: "Científico de Datos Jr"
+  - role: "Jr. Data Scientist"
     company: "JOYSTICK — FIFCO (Florida Ice and Farm Company)"
     start: "2023"
-    end: "presente"
+    end: "2025"
     description: >
-      Desarrollo de soluciones analíticas para campañas de marketing: diseño e
-      implementación de modelos de machine learning sobre Vertex AI, Cloud Run
-      y BigQuery para una plataforma de datos de clientes con más de 1M de
-      perfiles en 8 países. KPIs de comportamiento y segmentación para marcas
-      como Pilsen, Imperial, Heineken, Gatorade y Bavaria. Desarrollé además
-      una aplicación web con un clasificador de ML que permitió identificar y
-      devolver al ecosistema más de 850 kg de conchas marinas incautadas en un
-      aeropuerto.
+      Developed analytical solutions for marketing through segmentation and
+      cloud deployment of predictive models: machine learning on Vertex AI,
+      Cloud Run and BigQuery for customer data platforms managing 1M+ profiles
+      across 8 countries; actionable insights and segmentation for brands
+      including Pilsen, Imperial, Heineken, Gatorade and Bavaria; and a web
+      application powered by an ML classifier that facilitated returning over
+      850 kg of seized seashells to their native ecosystem.
+  - role: "Data Scientist I"
+    company: "BAC Latam"
+    start: "2025"
+    end: "present"
+    description: >
+      From the Corporate Data & Analytics Division, I support customer
+      segmentation and linkage processes, helping strengthen decision-making
+      and service personalization across the bank.
 education:
-  - degree: "Bachillerato en Estadística"
-    institution: "Universidad de Costa Rica"
+  - degree: "M.Sc. in Computer Science"
+    institution: "Instituto Tecnológico de Costa Rica (TEC)"
+    period: "2026 – 2028 (expected)"
+    thesis: >
+      Graduate program focused on research in theoretical and applied
+      computing, including machine learning and artificial intelligence.
+  - degree: "B.Sc. in Statistics"
+    institution: "University of Costa Rica"
     period: "2021 – 2025"
     thesis: >
-      Formación especializada en análisis de datos, aprendizaje automático y
-      programación estadística con Python y R.
+      Specialized coursework in data analysis, machine learning, and
+      statistical programming with Python and R.
 stack:
-  modelado: ["Python", "R", "Scikit-learn", "PyTorch", "TensorFlow"]
-  cloud: ["GCP", "Vertex AI", "BigQuery", "Cloud Run"]
-  datos: ["SQL", "Tableau", "Power BI", "Salesforce CRM"]
-  desarrollo: ["FastAPI", "React", "Django", "Git / GitHub"]
+  modeling: ["Python", "R", "Scikit-learn", "PyTorch", "TensorFlow"]
+  cloud: ["GCP", "Vertex AI", "BigQuery", "Cloud Run", "Azure", "Databricks"]
+  data: ["SQL", "Tableau", "Power BI", "Salesforce CRM"]
+  engineering: ["FastAPI", "React", "Django", "Git / GitHub"]
 contact:
   email: "luisfersolanocoto@gmail.com"
   linkedin: "https://www.linkedin.com/"

@@ -5,8 +5,8 @@ import { usePathname } from "next/navigation";
 
 const LINKS = [
   { href: "/", label: "Home" },
-  { href: "/proyectos", label: "Projects" },
-  { href: "/publicaciones", label: "Publications" },
+  { href: "/projects", label: "Projects" },
+  { href: "/publications", label: "Publications" },
   { href: "/resume", label: "Resume" },
 ];
 
@@ -21,7 +21,7 @@ export default function Nav() {
   return (
     <header className="fixed top-0 z-50 w-full border-b border-line bg-panel/80 backdrop-blur-md">
       <nav
-        aria-label="Principal"
+        aria-label="Primary"
         className="flex h-16 w-full items-center justify-between px-margin-mobile md:px-margin-desktop"
       >
         <Link

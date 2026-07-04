@@ -36,7 +36,7 @@ export default function HomePage() {
           <div className="h-24 w-24 shrink-0 overflow-hidden rounded-full border border-line p-1">
             <Image
               src={resume.photo}
-              alt={`Retrato de ${resume.name}`}
+              alt={`Portrait of ${resume.name}`}
               width={96}
               height={96}
               className="h-full w-full rounded-full object-cover contrast-125 grayscale"
@@ -69,7 +69,7 @@ export default function HomePage() {
         {lastPublication && (
           <div className="md:col-span-5">
             <Link
-              href="/publicaciones"
+              href="/publications"
               className="group block border border-line bg-surface p-6 transition-colors hover:bg-panel"
             >
               <span className="mb-2 block font-mono text-caps uppercase text-faint">

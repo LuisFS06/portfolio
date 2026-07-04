@@ -7,14 +7,14 @@ import { withBasePath } from "@/lib/basePath";
 export const metadata: Metadata = {
   title: "Resume",
   description:
-    "Trayectoria, stack técnico y formación de un Machine Learning Engineer & Data Architect.",
+    "Career log, technical stack and education of a Data Scientist & Machine Learning Engineer.",
 };
 
 const STACK_LABEL: Record<string, string> = {
-  modelado: "MODELADO",
+  modeling: "MODELING",
   cloud: "CLOUD",
-  datos: "DATOS & BI",
-  desarrollo: "DESARROLLO",
+  data: "DATA & BI",
+  engineering: "ENGINEERING",
 };
 
 // El timeline dibuja la carrera como una loss curve ascendente: el hito más
@@ -31,7 +31,7 @@ export default function ResumePage() {
         <div className="group relative aspect-square overflow-hidden border border-line bg-panel md:col-span-4">
           <Image
             src={resume.photo}
-            alt={`Retrato editorial de ${resume.name}`}
+            alt={`Editorial portrait of ${resume.name}`}
             fill
             sizes="(max-width: 768px) 100vw, 384px"
             className="object-cover opacity-80 grayscale transition-all duration-700 group-hover:grayscale-0"
@@ -57,7 +57,7 @@ export default function ResumePage() {
               download
               className="inline-block bg-accent px-6 py-3 font-mono text-caps uppercase text-accent-ink transition-opacity hover:opacity-90"
             >
-              Descargar PDF
+              Download PDF
             </a>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function ResumePage() {
               EXPERIENCE_OPTIMIZATION_PATH
             </p>
             <h2 className="font-display text-display-md text-foreground">
-              Hitos de Carrera
+              Career Milestones
             </h2>
           </div>
           <p className="hidden font-mono text-utility text-muted md:block">
@@ -92,7 +92,7 @@ export default function ResumePage() {
                 className={`border-t border-line transition-colors duration-300 hover:border-accent ${MILESTONE_OFFSETS[i] ?? "pt-8"}`}
               >
                 <p className="mb-4 mt-4 font-mono text-caps uppercase text-signal-ok">
-                  {exp.start}_{exp.end === "presente" ? "RUNNING" : "CHECKPOINT"}
+                  {exp.start}_{exp.end === "present" ? "RUNNING" : "CHECKPOINT"}
                 </p>
                 <h3 className="mb-2 font-display text-headline-sm text-foreground">
                   {exp.role}
@@ -144,7 +144,7 @@ export default function ResumePage() {
             ACADEMIC_FOUNDATION
           </p>
           {resume.education.map((edu) => (
-            <div key={edu.degree} className="relative border-l border-line pl-6">
+            <div key={edu.degree} className="relative mb-12 border-l border-line pl-6 last:mb-0">
               <span
                 className="absolute -left-1 top-0 h-2 w-2 bg-accent"
                 aria-hidden="true"
@@ -157,7 +157,7 @@ export default function ResumePage() {
               </p>
               {edu.thesis && (
                 <p className="mb-6 font-serif text-body-md italic text-muted">
-                  Tesis: “{edu.thesis.trim()}”
+                  {edu.thesis.trim()}
                 </p>
               )}
               <p className="flex items-center gap-3 font-mono text-caps uppercase text-muted">

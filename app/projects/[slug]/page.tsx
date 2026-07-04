@@ -22,12 +22,12 @@ export async function generateMetadata({
   const { slug } = await params;
   const project = getProjectBySlug(slug);
   return {
-    title: project?.title ?? "Proyecto",
+    title: project?.title ?? "Project",
     description: project?.excerpt,
   };
 }
 
-export default async function ProyectoDetailPage({
+export default async function ProjectDetailPage({
   params,
 }: {
   params: Promise<{ slug: string }>;
@@ -40,13 +40,13 @@ export default async function ProyectoDetailPage({
     <article className="mx-auto w-full max-w-container px-margin-mobile pb-24 pt-16 md:px-margin-desktop">
       <header className="mb-12">
         <Link
-          href="/proyectos"
+          href="/projects"
           className="mb-8 inline-block font-mono text-caps uppercase text-muted transition-colors hover:text-accent"
         >
           ← INDEX
         </Link>
         <p className="mb-2 font-mono text-caps uppercase text-faint">
-          PROYECTO {"//"} {project.slug.replace(/-/g, "_").toUpperCase()}
+          PROJECT {"//"} {project.slug.replace(/-/g, "_").toUpperCase()}
         </p>
         <h1 className="mb-6 max-w-3xl font-display text-display-lg-mobile text-accent md:text-display-lg">
           {project.title}
@@ -55,7 +55,7 @@ export default async function ProyectoDetailPage({
           <span className="font-mono text-utility uppercase text-muted">
             {project.date.slice(0, 7)} · {project.role}
           </span>
-          <ul className="flex flex-wrap gap-2" aria-label="Stack tecnológico">
+          <ul className="flex flex-wrap gap-2" aria-label="Tech stack">
             {project.stack.map((tech) => (
               <li key={tech}>
                 <StackTag label={tech} size="sm" />
@@ -83,10 +83,10 @@ export default async function ProyectoDetailPage({
 
       <footer className="mt-24 border-t border-line pt-8">
         <Link
-          href="/proyectos"
+          href="/projects"
           className="font-mono text-caps uppercase text-muted transition-colors hover:text-accent"
         >
-          ← VOLVER_AL_INDEX
+          ← BACK_TO_INDEX
         </Link>
       </footer>
     </article>

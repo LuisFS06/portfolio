@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { getAllPublications } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Publicaciones",
+  title: "Publications",
   description:
-    "Archivo cronológico de publicaciones técnicas y contribuciones revisadas por pares.",
+    "A chronological archive of technical publications and peer-reviewed contributions.",
 };
 
 const TYPE_LABEL: Record<string, string> = {
@@ -60,6 +60,11 @@ export default function PublicacionesPage() {
               <h2 className="font-display text-display-md text-foreground transition-colors duration-300 group-hover:text-accent">
                 {pub.title}
               </h2>
+              {pub.authors && (
+                <p className="font-serif text-body-md italic text-muted">
+                  {pub.authors}
+                </p>
+              )}
               <div className="flex flex-wrap gap-x-6 gap-y-2">
                 <span className="font-mono text-utility uppercase text-muted">
                   Venue: {pub.venue}

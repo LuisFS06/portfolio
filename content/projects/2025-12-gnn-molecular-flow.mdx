@@ -6,22 +6,22 @@ stack: ["pyg", "cuda"]
 status: "prod"
 tags: ["research", "mlops"]
 heroImage: "/images/projects/gnn-molecular-flow/hero.svg"
-heroImageAlt: "Grafo molecular con nodos y aristas en trazos blancos finos sobre fondo grafito oscuro"
+heroImageAlt: "Molecular graph with nodes and edges drawn in thin white strokes on a dark graphite background"
 thesis: "Graph Neural Networks applied to protein synthesis simulations for drug discovery and chemical pathing."
-excerpt: "Redes neuronales de grafos aplicadas a simulaciones de síntesis de proteínas para descubrimiento de fármacos."
+excerpt: "Graph neural networks applied to protein synthesis simulations for drug discovery."
 featured: true
 ---
 
-## Contexto
+## Context
 
-Las simulaciones de síntesis de proteínas generan grafos con millones de nodos cuya evaluación con métodos clásicos toma horas. Este proyecto reemplaza el scoring físico-químico tradicional por una GNN entrenada para predecir la viabilidad de rutas de síntesis en segundos.
+Protein synthesis simulations generate graphs with millions of nodes whose evaluation with classical methods takes hours. This project replaces traditional physicochemical scoring with a GNN trained to predict the viability of synthesis routes in seconds.
 
-## Arquitectura
+## Architecture
 
-El modelo es una red de paso de mensajes (MPNN) con atención sobre aristas, entrenada con PyTorch Geometric. El muestreo de vecindarios corre en kernels CUDA propios para mantener el grafo completo en GPU y evitar el cuello de botella de transferencia.
+The model is a message-passing neural network (MPNN) with edge attention, trained with PyTorch Geometric. Neighborhood sampling runs on custom CUDA kernels to keep the full graph on GPU and avoid the transfer bottleneck.
 
-## Resultados
+## Results
 
-- Correlación de Spearman de **0.91** contra el scoring físico-químico de referencia.
-- Tiempo de evaluación por ruta: de 40 minutos a **11 segundos**.
-- En producción como filtro previo del pipeline de screening, descartando el 87% de rutas inviables antes de la simulación costosa.
+- Spearman correlation of **0.91** against the reference physicochemical scoring.
+- Evaluation time per route: from 40 minutes down to **11 seconds**.
+- In production as a pre-filter for the screening pipeline, discarding 87% of unviable routes before the expensive simulation.

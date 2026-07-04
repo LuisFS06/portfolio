@@ -6,26 +6,26 @@ stack: ["tensorflow-lite", "c++"]
 status: "experimental"
 tags: ["nlp", "mlops"]
 heroImage: "/images/projects/transformer-edge-opt/hero.svg"
-heroImageAlt: "Ilustración de un chip embebido con un grafo de atención comprimido sobre fondo grafito"
+heroImageAlt: "Illustration of an embedded chip with a compressed attention graph on a graphite background"
 thesis: "Compression techniques for large language models deploying on resource-constrained embedded systems."
-excerpt: "Técnicas de compresión para desplegar modelos de lenguaje en sistemas embebidos con recursos restringidos."
+excerpt: "Compression techniques to deploy language models on resource-constrained embedded systems."
 featured: true
 ---
 
-## Contexto
+## Context
 
-Llevar un transformer a un dispositivo con 512 MB de RAM y sin acelerador dedicado exige repensar el modelo completo, no solo cuantizarlo. Este proyecto explora el límite práctico de la compresión: ¿cuánto se puede reducir un modelo antes de que la degradación sea perceptible en tareas de clasificación de intención?
+Bringing a transformer to a device with 512 MB of RAM and no dedicated accelerator requires rethinking the whole model, not just quantizing it. This project explores the practical limit of compression: how much can a model be reduced before the degradation becomes noticeable in intent-classification tasks?
 
-## Enfoque
+## Approach
 
-Tres técnicas aplicadas en cascada, medidas de forma aislada y combinada:
+Three techniques applied in cascade, measured in isolation and combined:
 
-1. **Destilación estructurada** hacia una arquitectura estudiante con la mitad de capas y atención agrupada.
-2. **Cuantización int8 post-entrenamiento** con calibración por percentiles sobre un corpus representativo.
-3. **Poda de cabezas de atención** guiada por la varianza de activación en validación.
+1. **Structured distillation** into a student architecture with half the layers and grouped attention.
+2. **Post-training int8 quantization** with percentile calibration over a representative corpus.
+3. **Attention-head pruning** guided by activation variance on validation.
 
-La inferencia corre sobre TensorFlow Lite con kernels críticos reescritos en C++ para el path de embedding.
+Inference runs on TensorFlow Lite with critical kernels rewritten in C++ for the embedding path.
 
-## Estado actual
+## Current status
 
-El proyecto está en fase **experimental**: la variante int8 alcanza el 94% del F1 del modelo maestro con 9× menos memoria, pero la latencia en frío todavía excede el presupuesto en dispositivos de gama más baja. La siguiente iteración explora cuantización fp16 selectiva por capa.
+The project is in an **experimental** phase: the int8 variant reaches 94% of the teacher model's F1 with 9× less memory, but cold-start latency still exceeds the budget on lower-end devices. The next iteration explores selective per-layer fp16 quantization.
