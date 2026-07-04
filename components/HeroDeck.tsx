@@ -66,6 +66,8 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
   if (count === 0) return null;
   const active = slides[activeIndex];
   const year = active.date.slice(0, 4);
+  const prevSlide = count >= 3 ? slides[(activeIndex - 1 + count) % count] : null;
+  const nextSlide = count >= 2 ? slides[(activeIndex + 1) % count] : null;
 
   const variants = prefersReducedMotion
     ? {
@@ -115,8 +117,44 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
         </div>
       </div>
 
-      {/* Escenario: slide activo con crossfade + escala */}
-      <div className="relative flex flex-grow items-center justify-center px-margin-mobile md:px-24">
+      {/* Escenario: slide activo con crossfade + escala, previews laterales inclinados */}
+      <div className="relative flex flex-grow items-center justify-center px-margin-mobile [perspective:1500px] md:px-24">
+        {/* Preview del proyecto anterior (izquierda) */}
+        {prevSlide && (
+          <button
+            type="button"
+            onClick={() => go(-1)}
+            aria-label={`Ir al proyecto anterior: ${prevSlide.title}`}
+            className="absolute left-0 z-10 hidden h-96 w-[520px] cursor-pointer items-center justify-center border border-line bg-surface/40 p-8 opacity-60 blur-[1px] grayscale backdrop-blur-md transition-all duration-500 [transform:translateX(-15%)_scale(0.75)_rotateY(12deg)] hover:border-accent-50 hover:opacity-90 hover:blur-0 hover:grayscale-0 xl:flex"
+          >
+            <span className="flex flex-col items-center gap-4 opacity-40">
+              <span className="font-mono text-caps uppercase text-accent">
+                PREV: {prevSlide.title}
+              </span>
+              <span className="mt-2 max-w-xs text-center font-serif text-body-md italic text-muted">
+                {prevSlide.thesis}
+              </span>
+            </span>
+          </button>
+        )}
+        {/* Preview del proyecto siguiente (derecha) */}
+        {nextSlide && (
+          <button
+            type="button"
+            onClick={() => go(1)}
+            aria-label={`Ir al proyecto siguiente: ${nextSlide.title}`}
+            className="absolute right-0 z-10 hidden h-96 w-[520px] cursor-pointer items-center justify-center border border-line bg-surface/40 p-8 opacity-60 blur-[1px] grayscale backdrop-blur-md transition-all duration-500 [transform:translateX(15%)_scale(0.75)_rotateY(-12deg)] hover:border-accent-50 hover:opacity-90 hover:blur-0 hover:grayscale-0 xl:flex"
+          >
+            <span className="flex flex-col items-center gap-4 opacity-40">
+              <span className="font-mono text-caps uppercase text-accent">
+                NEXT: {nextSlide.title}
+              </span>
+              <span className="mt-2 max-w-xs text-center font-serif text-body-md italic text-muted">
+                {nextSlide.thesis}
+              </span>
+            </span>
+          </button>
+        )}
         <AnimatePresence initial={false} mode="popLayout">
           <motion.div
             key={active.slug}
