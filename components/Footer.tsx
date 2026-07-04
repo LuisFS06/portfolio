@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="fixed bottom-0 z-50 w-full border-t border-line bg-canvas/70 backdrop-blur-md">
-      <div className="mx-auto flex h-12 w-full max-w-container items-center justify-between px-margin-mobile md:px-margin-desktop">
+      <div className="flex h-12 w-full items-center justify-between px-margin-mobile md:px-margin-desktop">
         <span className="font-mono text-caps uppercase text-muted opacity-70">
           ©2026 SYSTEM_LOG_ACTIVE
         </span>

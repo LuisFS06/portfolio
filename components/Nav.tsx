@@ -22,7 +22,7 @@ export default function Nav() {
     <header className="fixed top-0 z-50 w-full border-b border-line bg-panel/80 backdrop-blur-md">
       <nav
         aria-label="Principal"
-        className="mx-auto flex h-16 w-full max-w-container items-center justify-between px-margin-mobile md:px-margin-desktop"
+        className="flex h-16 w-full items-center justify-between px-margin-mobile md:px-margin-desktop"
       >
         <Link
           href="/"
