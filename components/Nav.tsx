@@ -26,11 +26,11 @@ export default function Nav() {
       >
         <Link
           href="/"
-          className="font-mono text-utility uppercase tracking-widest text-accent"
+          className="hidden font-mono text-utility uppercase tracking-widest text-accent sm:block"
         >
           ML_ENGINEER
         </Link>
-        <ul className="flex items-center gap-4 md:gap-8">
+        <ul className="mx-auto flex items-center gap-6 sm:mx-0 sm:gap-4 md:gap-8">
           {LINKS.map(({ href, label }) => {
             const active = isActive(pathname, href);
             return (

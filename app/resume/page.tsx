@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 
 const STACK_LABEL: Record<string, string> = {
   modelado: "MODELADO",
-  mlops: "MLOPS",
-  datos: "DATOS",
   cloud: "CLOUD",
+  datos: "DATOS & BI",
+  desarrollo: "DESARROLLO",
 };
 
 // El timeline dibuja la carrera como una loss curve ascendente: el hito más
@@ -92,7 +92,7 @@ export default function ResumePage() {
                 className={`border-t border-line transition-colors duration-300 hover:border-accent ${MILESTONE_OFFSETS[i] ?? "pt-8"}`}
               >
                 <p className="mb-4 mt-4 font-mono text-caps uppercase text-signal-ok">
-                  {exp.start}_{exp.end === "presente" ? "PROJECTION" : "CHECKPOINT"}
+                  {exp.start}_{exp.end === "presente" ? "RUNNING" : "CHECKPOINT"}
                 </p>
                 <h3 className="mb-2 font-display text-headline-sm text-foreground">
                   {exp.role}

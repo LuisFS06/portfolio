@@ -1,47 +1,39 @@
-name: "Luis Fernando Solano"
-role: "Machine Learning Engineer & Data Architect"
+name: "Luis Fernando Solano Coto"
+role: "Científico de Datos & Machine Learning Engineer"
 photo: "/images/profile.svg"
 bio: >
-  Mi evolución no ha sido lineal, sino una optimización constante. Comencé mi
-  trayectoria como Data Scientist, fascinado por la capacidad de los datos para
-  contar historias. Sin embargo, pronto descubrí que la verdadera magia ocurre
-  cuando esas historias se convierten en sistemas escalables. Hoy, mi enfoque
-  reside en la intersección de la precisión algorítmica y la robustez de MLOps,
-  transformando modelos de investigación en motores de producción eficientes.
+  Estadístico por la Universidad de Costa Rica y científico de datos en FIFCO,
+  donde diseño y despliego modelos de machine learning sobre Vertex AI,
+  BigQuery y Cloud Run para plataformas que gestionan más de un millón de
+  perfiles en ocho países. Mi trayectoria comenzó en el análisis estadístico y
+  hoy se optimiza hacia la ingeniería de ML: convertir modelos de investigación
+  en sistemas de producción confiables.
 experience:
-  - role: "Lead Data Scientist"
-    company: "FINTECH_GLOBAL"
+  - role: "Científico de Datos Jr"
+    company: "JOYSTICK — FIFCO (Florida Ice and Farm Company)"
     start: "2023"
-    end: "2024"
-    description: >
-      Liderazgo de modelos predictivos de riesgo crediticio. Transición hacia
-      el despliegue automatizado de microservicios de inferencia.
-  - role: "Senior ML Engineer"
-    company: "AI_NATIVE_SOLUTIONS"
-    start: "2024"
-    end: "2026"
-    description: >
-      Escalado de infraestructuras para LLMs. Implementación de orquestadores
-      de pipelines (Kubeflow) y monitorización en tiempo real.
-  - role: "Chief Architecture"
-    company: "INTELLIGENCE_LABS"
-    start: "2026"
     end: "presente"
     description: >
-      Visión de sistemas de IA autónomos y distribuidos. Diseño de
-      arquitecturas de baja latencia para computación perimetral.
+      Desarrollo de soluciones analíticas para campañas de marketing: diseño e
+      implementación de modelos de machine learning sobre Vertex AI, Cloud Run
+      y BigQuery para una plataforma de datos de clientes con más de 1M de
+      perfiles en 8 países. KPIs de comportamiento y segmentación para marcas
+      como Pilsen, Imperial, Heineken, Gatorade y Bavaria. Desarrollé además
+      una aplicación web con un clasificador de ML que permitió identificar y
+      devolver al ecosistema más de 850 kg de conchas marinas incautadas en un
+      aeropuerto.
 education:
-  - degree: "Maestría en Ciencias de la Computación"
-    institution: "U. Nacional de Ingeniería"
-    period: "2025 – en curso"
+  - degree: "Bachillerato en Estadística"
+    institution: "Universidad de Costa Rica"
+    period: "2021 – 2025"
     thesis: >
-      Inferencia Bayesiana aplicada a la predicción de volatilidad en mercados
-      emergentes de alta frecuencia.
+      Formación especializada en análisis de datos, aprendizaje automático y
+      programación estadística con Python y R.
 stack:
-  modelado: ["PyTorch", "TensorFlow", "Transformers", "XGBoost"]
-  mlops: ["Docker", "Kubernetes", "MLflow", "DVC"]
-  datos: ["Spark", "PostgreSQL", "Redis", "Kafka"]
-  cloud: ["AWS (SageMaker)", "GCP (VertexAI)", "Terraform"]
+  modelado: ["Python", "R", "Scikit-learn", "PyTorch", "TensorFlow"]
+  cloud: ["GCP", "Vertex AI", "BigQuery", "Cloud Run"]
+  datos: ["SQL", "Tableau", "Power BI", "Salesforce CRM"]
+  desarrollo: ["FastAPI", "React", "Django", "Git / GitHub"]
 contact:
   email: "luisfersolanocoto@gmail.com"
   linkedin: "https://www.linkedin.com/"

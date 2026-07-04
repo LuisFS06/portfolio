@@ -9,33 +9,45 @@ endobj
 << /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 715 >>
+<< /Length 2006 >>
 stream
-BT /F1 11 Tf 72 720 Td 16 TL
-(LUIS FERNANDO SOLANO) Tj T*
-(Machine Learning Engineer & Data Architect) Tj T*
-() Tj T*
-(EXPERIENCE) Tj T*
-(2026-     Chief Architecture - INTELLIGENCE_LABS) Tj T*
-(2024-26   Senior ML Engineer - AI_NATIVE_SOLUTIONS) Tj T*
-(2023-24   Lead Data Scientist - FINTECH_GLOBAL) Tj T*
-() Tj T*
-(EDUCATION) Tj T*
-(MSc Computer Science \(Financial Computing\) - U. Nacional de Ingenieria) Tj T*
-() Tj T*
-(STACK) Tj T*
-(PyTorch / TensorFlow / Transformers / XGBoost) Tj T*
-(Docker / Kubernetes / MLflow / DVC) Tj T*
-(Spark / PostgreSQL / Redis / Kafka) Tj T*
-(AWS SageMaker / GCP VertexAI / Terraform) Tj T*
-() Tj T*
-(CONTACT) Tj T*
-(luisfersolanocoto@gmail.com  |  github.com/LuisFS06) Tj T*
+BT 72 730 Td
+/F1 13 Tf 0 -18 Td (LUIS FERNANDO SOLANO COTO) Tj
+/F1 11 Tf 0 -18 Td (Científico de Datos & Machine Learning Engineer) Tj
+/F1 10 Tf 0 -18 Td (Tibás, San José, Costa Rica  |  luisfersolanocoto@gmail.com) Tj
+/F1 10 Tf 0 -18 Td (github.com/LuisFS06) Tj
+/F1 10 Tf 0 -18 Td () Tj
+/F1 11 Tf 0 -18 Td (HABILIDADES) Tj
+/F1 10 Tf 0 -18 Td (Técnicas: Python | R | SQL | Machine Learning | Cloud \(Vertex AI,) Tj
+/F1 10 Tf 0 -18 Td (BigQuery, Cloud Run\) | Tableau, Power BI | Salesforce CRM) Tj
+/F1 10 Tf 0 -18 Td (Idiomas: Español \(nativo\), Inglés \(B2+\)) Tj
+/F1 10 Tf 0 -18 Td (Especialidades: Estadística, Machine Learning, Deep Learning) Tj
+/F1 10 Tf 0 -18 Td () Tj
+/F1 11 Tf 0 -18 Td (EXPERIENCIA) Tj
+/F1 10 Tf 0 -18 Td (JOYSTICK, FIFCO - Florida Ice and Farm Company) Tj
+/F1 10 Tf 0 -18 Td (Científico de Datos Jr  |  Ago. 2023 - Presente) Tj
+/F1 10 Tf 0 -18 Td (- Modelos de ML sobre Vertex AI, Cloud Run y BigQuery para una) Tj
+/F1 10 Tf 0 -18 Td (  plataforma de datos de clientes: +1M de perfiles en 8 países.) Tj
+/F1 10 Tf 0 -18 Td (- KPIs de comportamiento y segmentación de clientes para marcas) Tj
+/F1 10 Tf 0 -18 Td (  como Pilsen, Imperial, Heineken, Gatorade y Bavaria.) Tj
+/F1 10 Tf 0 -18 Td (- Análisis estadístico y visualización con Python, SQL y R.) Tj
+/F1 10 Tf 0 -18 Td (- App web con clasificador de ML que permitió devolver al) Tj
+/F1 10 Tf 0 -18 Td (  ecosistema +850 kg de conchas marinas incautadas.) Tj
+/F1 10 Tf 0 -18 Td (Herramientas: Python, Salesforce CRM, GCP, Git/GitHub, Tableau,) Tj
+/F1 10 Tf 0 -18 Td (Scikit-learn, PyTorch, TensorFlow, FastAPI, React, Django) Tj
+/F1 10 Tf 0 -18 Td () Tj
+/F1 11 Tf 0 -18 Td (EDUCACIÓN) Tj
+/F1 10 Tf 0 -18 Td (Universidad de Costa Rica  |  2021 - 2025) Tj
+/F1 10 Tf 0 -18 Td (Bachillerato en Estadística) Tj
+/F1 10 Tf 0 -18 Td (Análisis de datos, aprendizaje automático y programación) Tj
+/F1 10 Tf 0 -18 Td (estadística con Python y R.) Tj
+/F1 10 Tf 0 -18 Td () Tj
+/F1 9 Tf 0 -18 Td (Referencias disponibles a solicitud.) Tj
 ET
 endstream
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier /Encoding /WinAnsiEncoding >>
 endobj
 xref
 0 6
@@ -44,9 +56,9 @@ xref
 0000000058 00000 n 
 0000000115 00000 n 
 0000000241 00000 n 
-0000001007 00000 n 
+0000002299 00000 n 
 trailer
 << /Size 6 /Root 1 0 R >>
 startxref
-1075
+2394
 %%EOF
