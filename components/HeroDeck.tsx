@@ -119,41 +119,66 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
 
       {/* Escenario: slide activo con crossfade + escala, previews laterales inclinados */}
       <div className="relative flex flex-grow items-center justify-center px-margin-mobile [perspective:1500px] md:px-24">
-        {/* Preview del proyecto anterior (izquierda) */}
+        {/* Preview del proyecto anterior (izquierda): siempre visible,
+            asoma por el borde y en hover se acerca al centro */}
         {prevSlide && (
-          <button
-            type="button"
-            onClick={() => go(-1)}
-            aria-label={`Ir al proyecto anterior: ${prevSlide.title}`}
-            className="absolute left-0 z-10 hidden h-96 w-[520px] cursor-pointer items-center justify-center border border-line bg-surface/40 p-8 opacity-60 blur-[1px] grayscale backdrop-blur-md transition-all duration-500 [transform:translateX(-15%)_scale(0.75)_rotateY(12deg)] hover:border-accent-50 hover:opacity-90 hover:blur-0 hover:grayscale-0 xl:flex"
-          >
-            <span className="flex flex-col items-center gap-4 opacity-40">
-              <span className="font-mono text-caps uppercase text-accent">
-                PREV: {prevSlide.title}
+          <div className="absolute left-0 z-10 flex h-72 w-[70%] max-w-[520px] -translate-x-[78%] sm:-translate-x-[60%] md:h-96 lg:-translate-x-[40%] xl:w-[520px] xl:-translate-x-[15%]">
+            <motion.button
+              type="button"
+              onClick={() => go(-1)}
+              aria-label={`Ir al proyecto anterior: ${prevSlide.title}`}
+              initial={false}
+              style={{ scale: 0.75, rotateY: 12 }}
+              whileHover={
+                prefersReducedMotion ? undefined : { x: 48, scale: 0.84, rotateY: 5 }
+              }
+              whileFocus={
+                prefersReducedMotion ? undefined : { x: 48, scale: 0.84, rotateY: 5 }
+              }
+              whileTap={prefersReducedMotion ? undefined : { scale: 0.8 }}
+              transition={{ type: "spring", stiffness: 260, damping: 24 }}
+              className="flex h-full w-full cursor-pointer items-center justify-center overflow-hidden border border-line bg-surface/40 p-8 opacity-60 blur-[1px] grayscale backdrop-blur-md transition-[filter,opacity,border-color] duration-500 hover:border-accent-50 hover:opacity-90 hover:blur-0 hover:grayscale-0 focus-visible:border-accent-50 focus-visible:opacity-90 focus-visible:blur-0 focus-visible:grayscale-0"
+            >
+              <span className="flex flex-col items-center gap-4 opacity-40">
+                <span className="font-mono text-caps uppercase text-accent">
+                  PREV: {prevSlide.title}
+                </span>
+                <span className="mt-2 hidden max-w-xs text-center font-serif text-body-md italic text-muted sm:block">
+                  {prevSlide.thesis}
+                </span>
               </span>
-              <span className="mt-2 max-w-xs text-center font-serif text-body-md italic text-muted">
-                {prevSlide.thesis}
-              </span>
-            </span>
-          </button>
+            </motion.button>
+          </div>
         )}
         {/* Preview del proyecto siguiente (derecha) */}
         {nextSlide && (
-          <button
-            type="button"
-            onClick={() => go(1)}
-            aria-label={`Ir al proyecto siguiente: ${nextSlide.title}`}
-            className="absolute right-0 z-10 hidden h-96 w-[520px] cursor-pointer items-center justify-center border border-line bg-surface/40 p-8 opacity-60 blur-[1px] grayscale backdrop-blur-md transition-all duration-500 [transform:translateX(15%)_scale(0.75)_rotateY(-12deg)] hover:border-accent-50 hover:opacity-90 hover:blur-0 hover:grayscale-0 xl:flex"
-          >
-            <span className="flex flex-col items-center gap-4 opacity-40">
-              <span className="font-mono text-caps uppercase text-accent">
-                NEXT: {nextSlide.title}
+          <div className="absolute right-0 z-10 flex h-72 w-[70%] max-w-[520px] translate-x-[78%] sm:translate-x-[60%] md:h-96 lg:translate-x-[40%] xl:w-[520px] xl:translate-x-[15%]">
+            <motion.button
+              type="button"
+              onClick={() => go(1)}
+              aria-label={`Ir al proyecto siguiente: ${nextSlide.title}`}
+              initial={false}
+              style={{ scale: 0.75, rotateY: -12 }}
+              whileHover={
+                prefersReducedMotion ? undefined : { x: -48, scale: 0.84, rotateY: -5 }
+              }
+              whileFocus={
+                prefersReducedMotion ? undefined : { x: -48, scale: 0.84, rotateY: -5 }
+              }
+              whileTap={prefersReducedMotion ? undefined : { scale: 0.8 }}
+              transition={{ type: "spring", stiffness: 260, damping: 24 }}
+              className="flex h-full w-full cursor-pointer items-center justify-center overflow-hidden border border-line bg-surface/40 p-8 opacity-60 blur-[1px] grayscale backdrop-blur-md transition-[filter,opacity,border-color] duration-500 hover:border-accent-50 hover:opacity-90 hover:blur-0 hover:grayscale-0 focus-visible:border-accent-50 focus-visible:opacity-90 focus-visible:blur-0 focus-visible:grayscale-0"
+            >
+              <span className="flex flex-col items-center gap-4 opacity-40">
+                <span className="font-mono text-caps uppercase text-accent">
+                  NEXT: {nextSlide.title}
+                </span>
+                <span className="mt-2 hidden max-w-xs text-center font-serif text-body-md italic text-muted sm:block">
+                  {nextSlide.thesis}
+                </span>
               </span>
-              <span className="mt-2 max-w-xs text-center font-serif text-body-md italic text-muted">
-                {nextSlide.thesis}
-              </span>
-            </span>
-          </button>
+            </motion.button>
+          </div>
         )}
         <AnimatePresence initial={false} mode="popLayout">
           <motion.div
@@ -164,7 +189,7 @@ export default function HeroDeck({ slides }: { slides: HeroSlide[] }) {
             dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.2}
             onDragEnd={onDragEnd}
-            className="relative h-72 w-full max-w-2xl cursor-grab border border-line bg-surface/40 backdrop-blur-md active:cursor-grabbing md:h-96"
+            className="relative z-20 h-72 w-full max-w-2xl cursor-grab border border-line bg-surface/40 backdrop-blur-md active:cursor-grabbing md:h-96"
           >
             <Link
               href={`/proyectos/${active.slug}`}
