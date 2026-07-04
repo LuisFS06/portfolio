@@ -1,0 +1,14 @@
+# Dependencias y builds
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+
+# Secretos — nunca versionar API keys ni tokens
+.env
+.env.*
+
+# Sistema
+.DS_Store
+Thumbs.db

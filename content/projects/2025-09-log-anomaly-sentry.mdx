@@ -1,0 +1,25 @@
+---
+title: "Log Anomaly Sentry"
+date: "2025-09-01"
+role: "Data Sci."
+stack: ["scikit-learn", "go"]
+status: "archived"
+tags: ["mlops", "time-series"]
+heroImage: "/images/projects/log-anomaly-sentry/hero.svg"
+heroImageAlt: "Serie temporal de logs con un pico anómalo marcado por un punto blanco sobre la curva"
+thesis: "Real-time unsupervised detection of system irregularities across distributed microservice architectures."
+excerpt: "Detección no supervisada en tiempo real de irregularidades en arquitecturas de microservicios distribuidas."
+featured: false
+---
+
+## Contexto
+
+Antes de la observabilidad estructurada, el equipo dependía de umbrales estáticos que generaban tanto ruido que nadie los miraba. Este proyecto introdujo detección de anomalías no supervisada sobre los streams de logs de ~200 microservicios.
+
+## Enfoque
+
+Un Isolation Forest por servicio, reentrenado cada hora sobre una ventana móvil de 7 días, con extracción de features en un colector escrito en Go para sostener el volumen de ingesta. Las alertas se agrupan por correlación temporal para evitar tormentas de notificaciones.
+
+## Estado
+
+**Archivado**: el sistema corrió 18 meses en producción y fue reemplazado por la plataforma de observabilidad corporativa. El diseño del agrupamiento de alertas sobrevive en el sistema sucesor.

@@ -1,0 +1,31 @@
+---
+title: "Transformer Edge Optimization"
+date: "2026-04-01"
+role: "ML Eng."
+stack: ["tensorflow-lite", "c++"]
+status: "experimental"
+tags: ["nlp", "mlops"]
+heroImage: "/images/projects/transformer-edge-opt/hero.svg"
+heroImageAlt: "Ilustración de un chip embebido con un grafo de atención comprimido sobre fondo grafito"
+thesis: "Compression techniques for large language models deploying on resource-constrained embedded systems."
+excerpt: "Técnicas de compresión para desplegar modelos de lenguaje en sistemas embebidos con recursos restringidos."
+featured: true
+---
+
+## Contexto
+
+Llevar un transformer a un dispositivo con 512 MB de RAM y sin acelerador dedicado exige repensar el modelo completo, no solo cuantizarlo. Este proyecto explora el límite práctico de la compresión: ¿cuánto se puede reducir un modelo antes de que la degradación sea perceptible en tareas de clasificación de intención?
+
+## Enfoque
+
+Tres técnicas aplicadas en cascada, medidas de forma aislada y combinada:
+
+1. **Destilación estructurada** hacia una arquitectura estudiante con la mitad de capas y atención agrupada.
+2. **Cuantización int8 post-entrenamiento** con calibración por percentiles sobre un corpus representativo.
+3. **Poda de cabezas de atención** guiada por la varianza de activación en validación.
+
+La inferencia corre sobre TensorFlow Lite con kernels críticos reescritos en C++ para el path de embedding.
+
+## Estado actual
+
+El proyecto está en fase **experimental**: la variante int8 alcanza el 94% del F1 del modelo maestro con 9× menos memoria, pero la latencia en frío todavía excede el presupuesto en dispositivos de gama más baja. La siguiente iteración explora cuantización fp16 selectiva por capa.

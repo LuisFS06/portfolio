@@ -1,0 +1,49 @@
+name: "Luis Fernando Solano"
+role: "Machine Learning Engineer & Data Architect"
+photo: "/images/profile.svg"
+bio: >
+  Mi evolución no ha sido lineal, sino una optimización constante. Comencé mi
+  trayectoria como Data Scientist, fascinado por la capacidad de los datos para
+  contar historias. Sin embargo, pronto descubrí que la verdadera magia ocurre
+  cuando esas historias se convierten en sistemas escalables. Hoy, mi enfoque
+  reside en la intersección de la precisión algorítmica y la robustez de MLOps,
+  transformando modelos de investigación en motores de producción eficientes.
+experience:
+  - role: "Lead Data Scientist"
+    company: "FINTECH_GLOBAL"
+    start: "2023"
+    end: "2024"
+    description: >
+      Liderazgo de modelos predictivos de riesgo crediticio. Transición hacia
+      el despliegue automatizado de microservicios de inferencia.
+  - role: "Senior ML Engineer"
+    company: "AI_NATIVE_SOLUTIONS"
+    start: "2024"
+    end: "2026"
+    description: >
+      Escalado de infraestructuras para LLMs. Implementación de orquestadores
+      de pipelines (Kubeflow) y monitorización en tiempo real.
+  - role: "Chief Architecture"
+    company: "INTELLIGENCE_LABS"
+    start: "2026"
+    end: "presente"
+    description: >
+      Visión de sistemas de IA autónomos y distribuidos. Diseño de
+      arquitecturas de baja latencia para computación perimetral.
+education:
+  - degree: "Maestría en Ciencias de la Computación"
+    institution: "U. Nacional de Ingeniería"
+    period: "2025 – en curso"
+    thesis: >
+      Inferencia Bayesiana aplicada a la predicción de volatilidad en mercados
+      emergentes de alta frecuencia.
+stack:
+  modelado: ["PyTorch", "TensorFlow", "Transformers", "XGBoost"]
+  mlops: ["Docker", "Kubernetes", "MLflow", "DVC"]
+  datos: ["Spark", "PostgreSQL", "Redis", "Kafka"]
+  cloud: ["AWS (SageMaker)", "GCP (VertexAI)", "Terraform"]
+contact:
+  email: "luisfersolanocoto@gmail.com"
+  linkedin: "https://www.linkedin.com/"
+  github: "https://github.com/LuisFS06"
+  cvFile: "/resume.pdf"

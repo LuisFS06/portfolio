@@ -1,0 +1,158 @@
+@import "./tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-base);
+  color: var(--text-body);
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--accent-ink);
+}
+
+/* Foco de teclado visible en todo elemento interactivo (AA) */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Scrollbar fino, acorde al logbook */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+}
+
+/* Cuerpo editorial de proyectos y publicaciones (MDX) */
+.prose-logbook {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 48rem;
+}
+.prose-logbook h2,
+.prose-logbook h3 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  color: var(--text-body);
+  margin-top: 2.5em;
+  margin-bottom: 0.75em;
+}
+.prose-logbook h2 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.prose-logbook h3 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.prose-logbook p {
+  margin-bottom: 1.25em;
+}
+.prose-logbook a {
+  color: var(--text-body);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-logbook a:hover {
+  color: var(--accent);
+}
+.prose-logbook strong {
+  color: var(--text-body);
+}
+.prose-logbook ul,
+.prose-logbook ol {
+  margin: 1.25em 0;
+  padding-left: 1.5em;
+}
+.prose-logbook ul {
+  list-style: square;
+}
+.prose-logbook ol {
+  list-style: decimal;
+}
+.prose-logbook li {
+  margin-bottom: 0.5em;
+}
+.prose-logbook blockquote {
+  border-left: 1px solid var(--border);
+  padding-left: 1.5em;
+  font-style: italic;
+  margin: 1.5em 0;
+}
+.prose-logbook code {
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  background: var(--bg-container);
+  border: 1px solid var(--border);
+  padding: 0.15em 0.4em;
+  color: var(--text-body);
+}
+.prose-logbook pre {
+  background: var(--bg-lowest);
+  border: 1px solid var(--border);
+  padding: 1.25em;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+.prose-logbook pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  color: var(--text-muted);
+}
+.prose-logbook hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 3em 0;
+}
+.prose-logbook table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono), monospace;
+  font-size: 13px;
+  margin: 1.5em 0;
+}
+.prose-logbook th,
+.prose-logbook td {
+  border: 1px solid var(--border);
+  padding: 0.6em 0.9em;
+  text-align: left;
+}
+.prose-logbook th {
+  color: var(--text-body);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 11px;
+}
+
+/* Respeto global a prefers-reduced-motion: fuera transiciones decorativas */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,49 @@
+/*
+ * Design tokens — extraídos del design system "Technical Logbook"
+ * (Stitch, proyecto "Neural Ledger Portfolio", projects/11287020447508671179).
+ * Única fuente de verdad de color/tipografía/espaciado. No hardcodear hex
+ * fuera de este archivo.
+ */
+
+:root {
+  /* Capas de fondo — profundidad por tono, nunca por sombra */
+  --bg-base: #141313;            /* surface / background */
+  --bg-lowest: #0e0e0e;          /* surface-container-lowest */
+  --bg-surface: #1c1b1b;         /* surface-container-low */
+  --bg-container: #201f1f;       /* surface-container */
+  --bg-elevated: #2a2a2a;        /* surface-container-high */
+  --bg-highest: #353434;         /* surface-container-highest */
+  --bg-bright: #3a3939;          /* surface-bright */
+
+  /* Texto — blanco roto para cuerpo, nunca #fff puro salvo --accent */
+  --text-body: #e5e2e1;          /* on-surface */
+  --text-muted: #c4c7c8;         /* on-surface-variant */
+  --text-faint: #636565;         /* on-tertiary-container: eyebrows, metadatos */
+
+  /* Líneas finas — la elevación se dibuja con hairlines de 1px */
+  --border: #444748;             /* outline-variant */
+  --border-strong: #8e9192;      /* outline */
+
+  /* Acento — blanco puro, con disciplina: nav activo, botón primario,
+     foco de teclado, marcador de la loss curve */
+  --accent: #ffffff;             /* primary */
+  --accent-ink: #2f3131;         /* on-primary: texto sobre botón blanco */
+  --accent-10: rgba(255, 255, 255, 0.1);
+  --accent-20: rgba(255, 255, 255, 0.2);
+  --accent-50: rgba(255, 255, 255, 0.5);
+
+  /* Señales funcionales — SOLO para badges de estado, nunca decoración */
+  --signal-ok: #aad0ae;          /* secondary: prod */
+  --signal-ok-bright: #c5ecc9;   /* secondary-fixed: dot activo */
+  --signal-warn: #ffb4ab;        /* error: experimental */
+
+  /* Viñeta radial del HeroDeck (centro más claro → bordes base) */
+  --vignette: radial-gradient(circle at center, var(--bg-container) 0%, var(--bg-base) 70%);
+
+  /* Espaciado */
+  --unit: 4px;
+  --gutter: 24px;
+  --margin-mobile: 16px;
+  --margin-desktop: 64px;
+  --container-max: 1200px;
+}

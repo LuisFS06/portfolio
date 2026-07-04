@@ -1,0 +1,48 @@
+---
+title: "Distributed Latency Optimization for LLM Inference"
+date: "2026-06-01"
+role: "ML Eng."
+stack: ["pytorch", "airflow", "mlflow"]
+status: "prod"
+tags: ["mlops", "time-series", "finance"]
+heroImage: "/images/projects/distributed-latency-optimization/hero.svg"
+heroImageAlt: "Diagrama de arquitectura con tres nodos: capa de ingesta, nodo de cómputo y API de inferencia conectados por líneas finas"
+thesis: "A deep dive into the orchestration of distributed inference nodes, focusing on the reduction of tail latency in large-scale transformer deployments across heterogeneous hardware clusters."
+excerpt: "Orquestación de nodos de inferencia distribuidos para reducir la latencia de cola en despliegues de transformers a gran escala."
+featured: true
+---
+
+## Contexto
+
+Los despliegues de LLMs en producción sufren de un problema recurrente: la latencia media es aceptable, pero el percentil 99 se dispara cuando los clusters mezclan hardware heterogéneo. Este proyecto nació de la necesidad de servir inferencia con un objetivo de latencia menor a 40 ms en un entorno donde conviven GPUs de tres generaciones distintas.
+
+## Arquitectura
+
+El sistema se organiza en tres capas desacopladas:
+
+- **Ingest Layer** — normaliza y agrupa requests en micro-batches dinámicos según la presión de tráfico.
+- **Compute Node** — pool de workers con enrutamiento consciente del hardware: cada request se asigna al nodo cuya curva de latencia histórica minimiza el p99 esperado.
+- **Inference API** — capa de salida con circuit breakers y colas con presupuesto de tiempo (deadline-aware scheduling).
+
+```python
+def route(request: Request, nodes: list[Node]) -> Node:
+    """Enrutamiento consciente de la latencia de cola por nodo."""
+    candidates = [n for n in nodes if n.healthy]
+    return min(candidates, key=lambda n: n.p99_estimate(request.token_count))
+```
+
+## Decisiones técnicas
+
+La decisión más discutida fue abandonar el batching estático. Un batch fijo maximiza throughput, pero castiga el p99 en horas valle. El batching dinámico con ventana adaptativa redujo la latencia de cola un **38%** sin sacrificar más de un 4% de throughput agregado.
+
+El pipeline de reentrenamiento corre en Airflow con tracking de experimentos en MLflow; cada cambio de política de enrutamiento se valida contra un replay de tráfico real de 72 horas antes de promoverse.
+
+## Resultados
+
+| Métrica | Antes | Después |
+| --- | --- | --- |
+| p50 | 22 ms | 19 ms |
+| p99 | 118 ms | 41 ms |
+| Throughput | 100% | 96% |
+
+El sistema lleva ocho meses en producción sirviendo tráfico crítico sin incidentes de latencia.
